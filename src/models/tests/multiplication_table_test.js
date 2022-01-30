@@ -10,7 +10,7 @@ describe("Multiplication Table Function", function() {
         const primeNumbers = seiveOfEratosthenes(naturalNumbersNeeded, 3);
         const actual = generateMultiplicationTable(primeNumbers);
         const expected = [
-            [ 0, 2, 3, 5 ], 
+            [ "", 2, 3, 5 ], 
             [ 2, 4, 6, 10 ], 
             [ 3, 6, 9, 15 ], 
             [ 5, 10, 15, 25 ] 
