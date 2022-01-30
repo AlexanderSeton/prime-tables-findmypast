@@ -1,5 +1,5 @@
 const assert = require("assert");
-const seiveOfEratosthenes = require("../prime_seive.js");
+const seiveOfEratosthenes = require("../prime_sieve.js");
 const generateNaturalNumbers = require("../natural_numbers_generator.js");
 
 describe("Prime Seive Function", function() {
@@ -33,4 +33,3 @@ describe("Prime Seive Function", function() {
     });
 
 });
-
