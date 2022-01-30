@@ -1,5 +1,5 @@
-// function that will create an array of natural numbers (& starting with 0) containing the required amount of primes
-// number of natural numbers required will be estimated using the prime number theorem
+// function that will create an array of natural numbers (& starting with 0) containing the required amount of primes.
+// number of natural numbers required will be estimated using the prime number theorem.
 
 function generateNaturalNumbers(numberPrimesNeeded) {
     let naturalNumbersNeeded = 0;
