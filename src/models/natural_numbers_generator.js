@@ -1,4 +1,4 @@
-// function that will create an array of natural numbers (& starting with 0) containing the required amount of primes.
+// function that will return the maximum natural number of a range that contains the required amount of primes.
 // number of natural numbers required will be estimated using the prime number theorem.
 
 function generateNaturalNumbers(numberPrimesNeeded) {
@@ -25,13 +25,14 @@ function generateNaturalNumbers(numberPrimesNeeded) {
             }
         }
     }
-    // generate an array of boolean value trues, from indexes 0 to naturalNumbersNeeded
-    // this will be used by the seive function, the elements do not need numeric values as their index can be used for the same things. This is why we add 1 to the length of the array below, to represent 0
-    const naturalNumbersArray = new Array(naturalNumbersNeeded + 1).fill(true);
-    // set the elements at index 0 and 1 to false, because 0 and 1 are not primes
-    naturalNumbersArray[0] = false;
-    naturalNumbersArray[1] = false;
-    return naturalNumbersArray;
+    // // generate an array of boolean value trues, from indexes 0 to naturalNumbersNeeded
+    // // this will be used by the seive function, the elements do not need numeric values as their index can be used for the same things. This is why we add 1 to the length of the array below, to represent 0
+    // const naturalNumbersArray = new Array(naturalNumbersNeeded + 1).fill(true);
+    // // set the elements at index 0 and 1 to false, because 0 and 1 are not primes
+    // naturalNumbersArray[0] = false;
+    // naturalNumbersArray[1] = false;
+    // return naturalNumbersArray;
+    return naturalNumbersNeeded;
 }
 
 module.exports = generateNaturalNumbers;
