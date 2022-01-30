@@ -6,7 +6,7 @@ function generateMultiplicationTable(primesArray) {
     // create a 2D array
     const multiplicationTable = Array(axisLength).fill().map(() => new Array(axisLength).fill(1));
     // set the first cell at [0, 0] to have null value
-    multiplicationTable[0][0] = 0;
+    multiplicationTable[0][0] = "";
     // set the top row of the table to equal the primes array except for the top-left cell
     for (let i=0; i<primesArray.length; i++) {
         multiplicationTable[0][i+1] = primesArray[i];

@@ -25,4 +25,11 @@ describe("Web Application Tests", () => {
         cy.get("#input-box").should("have.value", "");
     });
 
+    it("Should display a table when a valid number is inputted", () => {
+        const newInput = "5";
+        cy.get("#input-box").type(`${newInput}{enter}`);
+        cy.get("#submit-button").click();
+        cy.get(".table").should("exist");
+    });
+
 });

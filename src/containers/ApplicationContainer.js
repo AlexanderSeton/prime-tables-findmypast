@@ -1,6 +1,7 @@
 import "./styles/application_container.css";
 import React, { useState } from "react";
 import Form from "../components/Form";
+import MultiplicationTable from "./MultiplicationTable.js";
 
 export default function ApplicationContainer() {
 
@@ -28,6 +29,9 @@ export default function ApplicationContainer() {
         <div className="application-container">
             <h1 id="title">Prime Multiplication Table</h1>
             <Form userInput={userInput} handleUserInput={handleUserInput} handleFormSubmit={handleFormSubmit} />
+            {numberPrimes !== undefined ? 
+                <MultiplicationTable numberPrimes={numberPrimes} /> 
+            : null}
         </div>
     );
 }
