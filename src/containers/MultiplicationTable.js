@@ -20,8 +20,15 @@ export default function Table({ numberPrimes }) {
         setMultiplicationTable(multiplicationTable);
     }
 
+    const getPrimeFactors = function(rowIndex, cellIndex) {
+        const output = [];
+        output.push(multiplicationTable[rowIndex][0]);
+        output.push(multiplicationTable[0][cellIndex]);
+        return output;
+    }
+
     const tableRows = multiplicationTable.map((row, index) => {
-        return <TableRow row={row} key={index} />
+        return <TableRow row={row} rowIndex={index} getPrimeFactors={getPrimeFactors} key={index} />
     })
 
     return(

@@ -6,8 +6,24 @@
     text-align: center;
     vertical-align: middle;
     line-height: 4em;
+    font-size: 125%;
 }
-/* 
-.table-cell:first-child {
-    background-color: lightblue;
-} */
+
+.info-button {
+    font-size: 75%;
+    border: transparent;
+    background-color: transparent;
+    float: right;
+}
+
+.info-button:hover {
+    transform: scale(1.75);
+}
+
+.pop-up-text {
+    border-radius: 2vw;
+    padding: 5%;
+    text-align: center;
+    opacity: 0.55;
+    background-color: grey;
+}
