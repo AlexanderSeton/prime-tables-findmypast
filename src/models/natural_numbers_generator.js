@@ -12,16 +12,27 @@ function generateNaturalNumbers(numberPrimesNeeded) {
     else {
         let found = false;
         let iteration = 1;
+        let naturalRangeMax = 100;
         while(!found) {
             // define a range of natural numbers
-            naturalNumbersNeeded = 100 * iteration;
+            naturalNumbersNeeded = naturalRangeMax;
             // use the prime factor theorem to estimate the amount of primes in the range of numbers defined above
             let estimatedNumberPrimes = Math.ceil(naturalNumbersNeeded / Math.log(naturalNumbersNeeded));
             // check if there will be enough primes in the range of natural numbers
             if (estimatedNumberPrimes >= numberPrimesNeeded) {
                 found = true;
-            } else {
-                iteration ++;
+            }
+            // not enough primes estimated to be in the given natural numbers range
+            else {
+                // check what percent of desired number of primes is estimated to be contained in the given range
+                let percentEstimated = (estimatedNumberPrimes / numberPrimesNeeded).toFixed(2);
+                // decrease percentage a little when very close to target amount, to avoid lots of small increases in the number of naturals
+                if (percentEstimated >= 0.95) {
+                    percentEstimated -= 0.01;
+                }
+                // use the estimated percent above to calculate the number of naturals needed to get 100% of the prime number needed
+                let naturalsEstimated = Math.ceil(naturalNumbersNeeded / percentEstimated);
+                naturalRangeMax = naturalsEstimated;
             }
         }
     }

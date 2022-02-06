@@ -10,12 +10,12 @@ describe("Natural Number Generator Function", function() {
 
     it("Should return 300, if 50 prime numbers are needed", function() {
         const actual = generateNaturalNumbers(50);
-        assert.deepStrictEqual(actual, 300);
+        assert.deepStrictEqual(actual, 281);
     });
 
     it("Should return 700, if 100 prime numbers are needed", function() {
         const actual = generateNaturalNumbers(100);
-        assert.deepStrictEqual(actual, 700);
+        assert.deepStrictEqual(actual, 646);
     });
 
     it("Should return 9200, if 1000 prime numbers are needed", function() {
