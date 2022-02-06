@@ -14,16 +14,19 @@
     border: transparent;
     background-color: transparent;
     float: right;
+    width: 100%;
+    padding-left: 85%;
 }
 
 .info-button:hover {
-    transform: scale(1.75);
+    color: red;
+    font-weight: bolder;
 }
 
 .pop-up-text {
     border-radius: 2vw;
     padding: 5%;
     text-align: center;
-    opacity: 0.55;
+    opacity: 0.85;
     background-color: grey;
 }
