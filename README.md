@@ -25,6 +25,5 @@ A web application that takes a numeric input (N) from a user, and then outputs a
 
 ## Possible Extensions  
 - Implement a different prime sieve algorithm with a better time complexity, such as the Sieve of Atkin       
-- Optomise my algorithm that calculates the range of naturals that need to be seived      
 - Improve my cypress tests to cover the application fully     
-- Add a popup when the user hovers over a cell of the table displaying the two primes that have been multiplied to produce it         
+- Optomise the React application so that it can render larger tables faster 
