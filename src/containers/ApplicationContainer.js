@@ -28,7 +28,11 @@ export default function ApplicationContainer() {
     return(
         <div className="application-container">
             <h1 id="title">Prime Multiplication Table</h1>
+            <p className="description">This application takes in a numeric input N, then outputs a multiplication table of N prime numbers</p>
             <Form userInput={userInput} handleUserInput={handleUserInput} handleFormSubmit={handleFormSubmit} />
+            {numberPrimes !== undefined ?
+                <p className="tool-tip-instructions">Hover over the question mark (?) to view the numbers prime factors</p>
+            : null}
             {numberPrimes !== undefined ? 
                 <MultiplicationTable numberPrimes={numberPrimes} /> 
             : null}

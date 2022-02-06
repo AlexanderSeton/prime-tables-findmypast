@@ -1,0 +1,13 @@
+.form {
+    font-size: 130%;
+    border: 1px black solid;
+    border-radius: 1vw;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    padding: 1% 2%;
+}
+
+#submit-button {
+    margin: 1%;
+}

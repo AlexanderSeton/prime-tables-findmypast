@@ -2,10 +2,10 @@ import "./styles/table_row.css";
 import React from "react";
 import TableCell from "./TableCell.js"
 
-export default function TableRow({ row }) {
+export default function TableRow({ row, rowIndex, getPrimeFactors }) {
 
-    let tableCellItems = row.map((element, index) => {
-        return <TableCell element={element} key={index} />
+    const tableCellItems = row.map((element, index) => {
+        return <TableCell element={element} rowIndex={rowIndex} cellIndex={index} getPrimeFactors={getPrimeFactors} key={index} />
     })
 
     return(
