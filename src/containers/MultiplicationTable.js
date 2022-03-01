@@ -4,6 +4,7 @@ import generateNaturalNumbers from "../models/natural_numbers_generator";
 import seiveOfEratosthenes from "../models/prime_sieve";
 import generateMultiplicationTable from "../models/multiplication_table";
 import TableRow from "../components/TableRow";
+import fibonacciGenerator from "../models/fibonacci_generator";
 
 export default function Table({ numberPrimes }) {
 
@@ -14,9 +15,11 @@ export default function Table({ numberPrimes }) {
     }, [numberPrimes])
 
     const createMultiplicationTable = function(numberPrimes) {
-        const naturalNumberRange = generateNaturalNumbers(numberPrimes);
-        const primes = seiveOfEratosthenes(naturalNumberRange, numberPrimes);
-        const multiplicationTable = generateMultiplicationTable(primes);
+        // const naturalNumberRange = generateNaturalNumbers(numberPrimes);
+        // const primes = seiveOfEratosthenes(naturalNumberRange, numberPrimes);
+        // const multiplicationTable = generateMultiplicationTable(primes);
+        const fibonacciNumbers = fibonacciGenerator(numberPrimes);
+        const multiplicationTable = generateMultiplicationTable(fibonacciNumbers);
         setMultiplicationTable(multiplicationTable);
     }
 
